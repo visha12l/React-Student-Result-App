@@ -10,23 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shrikant9/react-webpack-app.git"
+    "url": "git+https://github.com/visha12l/React-boiler-plate.git"
   },
   "keywords": [
     "react",
     "webpack",
     "biolerplate"
   ],
-  "author": "Shrikant Raut",
+  "author": "Vishal Shinde",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shrikant9/react-webpack-app/issues"
+    "url": "https://github.com/visha12l/React-boiler-plate/issues"
   },
-  "homepage": "https://github.com/Shrikant9/react-webpack-app#readme",
+  "homepage": "https://github.com/visha12l/React-boiler-plate#readme",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
+    "react-select": "^1.0.0-rc.5",
     "webpack": "^2.4.1"
   },
   "devDependencies": {
