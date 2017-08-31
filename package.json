@@ -6,7 +6,7 @@
   "scripts": {
     "test": "src/test.js",
     "build": "webpack",
-    "server": "webpack-dev-server --port 8001 --hot --host 0.0.0.0"
+    "server": "webpack-dev-server --port 8000 --hot --host 0.0.0.0"
   },
   "repository": {
     "type": "git",
