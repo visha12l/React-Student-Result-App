@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-var underscore = require('underscore');
-
 export default class About extends React.Component {
     constructor(props) {
         super(props);
     }
 
   render() {
-    console.log(underscore.isEmpty('ss'))
     return (
       <div className="container">
           <h1>About Page!</h1>
