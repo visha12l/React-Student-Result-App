@@ -3,8 +3,8 @@ import ReactDom from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
 // Pages
-import Home from './pages/Home';
-import About from './pages/About';
+import Home from './javascript/components/Home';
+import About from './javascript/components/About';
 
 // CSS
 import './css/style.css';
