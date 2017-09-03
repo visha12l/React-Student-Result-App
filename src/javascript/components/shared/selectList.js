@@ -6,10 +6,12 @@ import PropTypes from 'prop-types';
 export default class SelectComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.closeSelectDropdown = this.closeSelectDropdown.bind(this);
         this.state = {
             selectListDropdown: false, //initial state of dropdown
         };
+        this.openSelectDropdown = this.openSelectDropdown.bind(this);
+        this.closeSelectDropdown = this.closeSelectDropdown.bind(this);
+        this.closeSelectComponent = this.closeSelectComponent.bind(this);
     }
 
    componentWillMount () {
@@ -42,7 +44,7 @@ export default class SelectComponent extends React.Component {
         }
     }
 
-    closeComponent () {
+    closeSelectComponent () {
         this.props.toggleSelectList();
     }
 
@@ -53,7 +55,7 @@ export default class SelectComponent extends React.Component {
             <div className="App">
                 <div className="App-header clearfix">
                     <h2 className="pull-left">{this.props.selectListName} SELECT DROPDWON</h2>
-                    <a  className="pull-right" onClick={this.closeComponent.bind(this)}>close {this.props.selectListName} Component</a>
+                    <a  className="pull-right" onClick={this.closeSelectComponent}>close {this.props.selectListName} Component</a>
                 </div>
                 <div className="selectListWrap">
                     <div ref='selectionarea' className='selectionarea'>
@@ -61,7 +63,7 @@ export default class SelectComponent extends React.Component {
                             type="text"
                             ref="countryInput"
                             placeholder={this.props.placeholder}
-                            onFocus={this.openSelectDropdown.bind(this)}
+                            onFocus={this.openSelectDropdown}
                         />
                         {this.state.selectListDropdown &&
                             <ul className='contryListing'>

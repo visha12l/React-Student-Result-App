@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import SelectComponent from '../shared/selectList.js';
 import appConstants from '../../app-constants/appConstants';
 
-export default class About extends React.Component {
+export default class SelectIndex extends React.Component {
 
     constructor(props) {
         super(props);
@@ -28,7 +28,7 @@ export default class About extends React.Component {
                     <Link className="pull-right" to='/'>go to Home Page</Link>
                 </div>
                 <div>
-                    <a onClick={this.toggleSelectList.bind(this)}>open select list Component</a>
+                    <a onClick={this.toggleSelectList}>open select list Component</a>
                 </div>
                 {this.state.selectListStatus &&
                     <SelectComponent placeholder='select your country' toggleSelectList={this.toggleSelectList} listData={this.state.countryList} selectListName='COUNTRY' />
