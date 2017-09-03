@@ -6,44 +6,44 @@ import PropTypes from 'prop-types';
 export default class SelectComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.closeSelectList = this.closeSelectList.bind(this);
+        this.closeSelectDropdown = this.closeSelectDropdown.bind(this);
         this.state = {
-            showSelectList: false, //initial state of dropdown
+            selectListDropdown: false, //initial state of dropdown
         };
     }
 
    componentWillMount () {
-      document.addEventListener('click',this.closeSelectList);
+      document.addEventListener('click',this.closeSelectDropdown);
    }
 
    componentWillUnmount () {
-      document.removeEventListener('click',this.closeSelectList);
+      document.removeEventListener('click',this.closeSelectDropdown);
    }
 
-   openSelectList () {
+   openSelectDropdown () {
        this.setState({
-          showSelectList: true,
+          selectListDropdown: true,
        });
    }
 
    selectValue (listValue) {
        this.refs.countryInput.value = listValue; //storing the clicked value in input
        this.setState({
-           showSelectList: false, //close the list
+           selectListDropdown: false, //close the list
        });
    }
 
-    closeSelectList (event) { //code for closing the selectList
+    closeSelectDropdown (event) { //code for closing the selectList
         const area = ReactDOM.findDOMNode(this.refs.selectionarea); //react function to calculate the selectionArea
         if(area && !area.contains(event.target)) { // except area and avoid event.target area
             this.setState({
-                showSelectList: false, //close the list
+                selectListDropdown: false, //close the list
             });
         }
     }
 
     closeComponent () {
-        this.props.closeSelectList();
+        this.props.toggleSelectList();
     }
 
     render() {
@@ -61,9 +61,9 @@ export default class SelectComponent extends React.Component {
                             type="text"
                             ref="countryInput"
                             placeholder={this.props.placeholder}
-                            onFocus={this.openSelectList.bind(this)}
+                            onFocus={this.openSelectDropdown.bind(this)}
                         />
-                        {this.state.showSelectList &&
+                        {this.state.selectListDropdown &&
                             <ul className='contryListing'>
                                 {underscore.map(countryListArray, (list, key) =>
                                     <li key={key} onClick={this.selectValue.bind(this, list.name)}>{list.name}</li>)

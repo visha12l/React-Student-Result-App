@@ -11,16 +11,10 @@ export default class About extends React.Component {
             countryList : appConstants.country,
             selectListStatus: false,
         };
-        this.closeSelectList = this.closeSelectList.bind(this);
+        this.toggleSelectList = this.toggleSelectList.bind(this);
     }
 
-    openSelectList () {
-        this.setState({
-            selectListStatus: true,
-        });
-    }
-
-    closeSelectList () {
+    toggleSelectList () {
         this.setState({
             selectListStatus: !this.state.selectListStatus,
         });
@@ -34,10 +28,10 @@ export default class About extends React.Component {
                     <Link className="pull-right" to='/'>go to Home Page</Link>
                 </div>
                 <div>
-                    <a onClick={this.openSelectList.bind(this)}>open select list Component</a>
+                    <a onClick={this.toggleSelectList.bind(this)}>open select list Component</a>
                 </div>
                 {this.state.selectListStatus &&
-                    <SelectComponent placeholder='select your country' closeSelectList={this.closeSelectList} listData={this.state.countryList} selectListName='COUNTRY' />
+                    <SelectComponent placeholder='select your country' toggleSelectList={this.toggleSelectList} listData={this.state.countryList} selectListName='COUNTRY' />
                 }
             </div>
         );
