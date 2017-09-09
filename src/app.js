@@ -13,8 +13,8 @@ ReactDom.render((
    <Router>
       <div>
         <Route exact path="/" component={Home} />
-        <Route path="/selectList" component={StudentIndex} />
-//        <Route path="/studentApp" component={StudentIndex} />
+        <Route path="/selectList" component={SelectIndex} />
+        <Route path="/studentApp" component={StudentIndex} />
       </div>
    </Router>
 ), document.getElementById('app'));

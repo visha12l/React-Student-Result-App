@@ -4,55 +4,75 @@ import { Link } from 'react-router-dom';
 import BreadCrumb from '../shared/breadcrumb.js';
 import appConstants from '../../app-constants/appConstants.js';
 import StudentListing from './studentListing.js';
+import CustomCheckbox from '../shared/customCheckbox.js';
+import CustomSearch from '../shared/CustomSearch.js';
+import Data from '../../../static/result.json';
 
 export default class Index extends React.Component {
+
     constructor() {
         super();
         this.state = {
-          studentData: [
-                  {
-                    firstName: 'vishal',
-                    lastName: 'shinde',
-                    marks: {
-                      english: 70,
-                      hindi: 56
-                    }
-                  },
-                  {
-                    firstName: 'parth',
-                    lastName: 'shah',
-                    marks: {
-                      english: 10,
-                      hindi: 50
-                    }
-                  },
-                  {
-                    firstName: 'ankit',
-                    lastName: 'rao',
-                    marks: {
-                      english: 70,
-                      hindi: 20
-                    }
-                  },
-                  {
-                    firstName: 'prasad',
-                    lastName: 'kulkarni',
-                    marks: {
-                      english: 70,
-                      hindi: 30
-                    }
-                  }
-              ],
+            studentData: Data.results,
+            resultStatus: ['fail','pass','first class', 'second class'],
+            result: [],
         };
+        this.filterList = this.filterList.bind(this);
+        this.resetList = this.resetList.bind(this);
+        this.searchItem = this.searchItem.bind(this);
     }
+
+    componentWillMount(){
+        this.setState({
+            result: this.state.studentData,
+        });
+    }
+
+    componentDidMount(){
+        this.setState({
+            result: this.state.studentData,
+        });
+    }
+
+    searchItem(value) {
+        let updatedList = this.state.studentData;
+        updatedList = underscore.filter(updatedList, (student, key) => {
+            return (student.firstName.toLowerCase().search(value.toLowerCase()) !== -1) || (student.lastName.toLowerCase().search(
+                value.toLowerCase()) !== -1);
+        });
+        if(updatedList) {
+            this.setState({
+                result: updatedList
+            });
+        }
+        else {
+          console.log('no result found')
+        }
+    }
+
+    filterList(status, isChecked) {
+        //add filter logic here
+    }
+
+    resetList(status, isChecked) {
+        //add reset logic here
+    }
+
     render() {
-        debugger;
         return (
             <div className="container">
                 <div className="topwrap clearfix">
-                    <BreadCrumb link={appConstants.breadCrumb.studentLinks}/>
+                    <BreadCrumb link={appConstants.breadCrumb.selectListLinks} />
                 </div>
-                    <StudentListing studentData={this.state.studentData} />
+                <CustomSearch searchItem={this.searchItem} />
+                <div className="hide">
+                    {underscore.map(this.state.resultStatus, (status, key) => {
+                        return (
+                            <CustomCheckbox key={key} status={status} filterList={this.filterList} resetList={this.resetList} />
+                        )})
+                    }
+                </div>
+                <StudentListing studentData={this.state.result} />
             </div>
         )
     }

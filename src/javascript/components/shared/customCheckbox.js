@@ -1,36 +1,29 @@
-class CheckBox extends React.Component {
+import React from 'react';
+
+export default class CustomCheckbox extends React.Component {
     constructor () {
         super();
-        this.state = {
-            boxIsChecked: false,
-        };
         this.handleCheckBoxChange = this.handleCheckBoxChange.bind(this)
     }
 
-    handleCheckBoxChange (event)  {
-     //you code
-         this.setState({
-             boxIsChecked: !this.state.boxIsChecked
-         });
-        if (event.target.checked) {
-            this.props.filterlist();
-        }
-        else {
-            console.log('box is false');
-            this.props.resetList();
+    handleCheckBoxChange (status, event)  {
+        let isChecked = event.target.checked;
+        if(isChecked) {
+            this.props.filterList(status, isChecked);
+        } else {
+            this.props.resetList(status, isChecked);
         }
     }
 
     render () {
         return (
-            <div>
+            <div className="customCheckbox">
                 <input
                     type="checkbox"
                     name="person"
-                    checked={this.state.boxIsChecked}
-                    onChange={this.handleCheckBoxChange.bind(this)}
+                    onChange={this.handleCheckBoxChange.bind(this, this.props.status)}
                 />
-                <label>{this.props.checkboxText}</label>
+                <label htmlFor='person'>{this.props.status}</label>
             </div>
         );
     }
