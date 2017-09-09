@@ -15,6 +15,14 @@ const appConstants = {
             rule: `isRequired`,
             errorMessage: `firstName is required`
         }
-    }
+    },
+    breadCrumb: {
+        selectListLinks: [{link: '/', name: 'Home', className: 'active'},
+                          {link: '', name: 'selectList', className: 'currentPage'}],
+        getName(orgName) {
+            return [{link: '/', name: `home${orgName}`, className: 'currentPage'},
+                    {link: '/selectList', name: 'selectList', className: 'active'}]
+        },
+    },
 }
 export default appConstants;
