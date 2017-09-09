@@ -1,6 +1,7 @@
 body {
   padding-right: 20px;
   padding-left: 20px;
+  background-color: #f1f1f1;
 }
 .contryListing li {
   cursor: pointer;
@@ -12,4 +13,86 @@ body {
 .libryarySelect {
   margin-bottom: 80px;
   width: 200px;
+}
+.breadcrumbWrap {
+  list-style: none;
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbWrap  li {
+  float: left;
+  padding: 10px;
+  position: relative;
+}
+.breadcrumbWrap  li ::before {
+  position: absolute;
+  content: "|";
+  left: -2px;
+  color: #888;
+}
+.breadcrumbWrap  li:first-child {
+  padding-left: 0;
+}
+.breadcrumbWrap  li:first-child ::before {
+  content: '' ;
+}
+
+.breadcrumbWrap li a {
+  font-size: 14px;
+  color: grey;
+}
+.breadcrumbWrap li a.active {
+  color: #4a669e;
+}
+.breadcrumbWrap li a.active:hover {
+  color: green;
+}
+.breadcrumbWrap li a.currentPage {
+  pointer-events: none;
+  cursor: default;
+}
+/*loader*/
+.loaderOverlay {
+  background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: -999;
+  opacity: 0.5;
+}
+.loaderOverlay .loaderWrap {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  margin: -25px 0 0 -25px;
+}
+.loaderOverlay.fullScreenLoader {
+  z-index: 99999
+}
+.loaderOverlay .loaderWrap .loader {
+  width: 50px;
+  height: 50px;
+  -webkit-animation: circle infinite .75s linear;
+  -moz-animation: circle infinite .75s linear;
+  -o-animation: circle infinite .75s linear;
+  animation: circle infinite .75s linear;
+  border: 2px solid $black;
+  border-top-color: rgba(0,0,0,.2);
+  border-right-color: rgba(0,0,0,.2);
+  border-bottom-color: rgba(0,0,0,.2);
+  border-radius: 100%;
+}
+.loaderOverlay .loaderWrap .loaderIcon {
+  position: absolute;
+  width: 11px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  margin: -10px 0 0 -5px;
 }
