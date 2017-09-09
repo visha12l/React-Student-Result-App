@@ -19,9 +19,12 @@ const appConstants = {
     breadCrumb: {
         selectListLinks: [{link: '/', name: 'Home', className: 'active'},
                           {link: '', name: 'selectList', className: 'currentPage'}],
+        studentLinks: [{link: '/', name: 'Home', className: 'active'},
+                          {link: '', name: 'studentApp', className: 'currentPage'}],
         getName(orgName) {
             return [{link: '/', name: `home${orgName}`, className: 'currentPage'},
-                    {link: '/selectList', name: 'selectList', className: 'active'}]
+                    {link: '/selectList', name: 'selectList', className: 'active'},
+                    {link: '/studentApp', name: 'studentApp', className: 'active'}]
         },
     },
 }
