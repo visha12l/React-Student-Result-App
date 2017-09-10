@@ -3,7 +3,7 @@ import BreadCrumb from '../shared/breadcrumb.js';
 import appConstants from '../../app-constants/appConstants.js';
 
 const StudentDetails = (props) => {
-    let studentDetails = props.studentDetails;
+    let studentDetails = props.location.state;
     let total = studentDetails.marks.english + studentDetails.marks.hindi + studentDetails.marks.mathematics;
     let percentage = parseInt(total / 3);
     return (
@@ -11,7 +11,7 @@ const StudentDetails = (props) => {
             <div className="topwrap clearfix">
                 <BreadCrumb link={appConstants.breadCrumb.studentDetailsLink} />
             </div>
-            <div>{`${studentDetails.firstName} ${studentDetails.lastName}`}</div>
+            <div>{`Name :: ${studentDetails.firstName} ${studentDetails.lastName}`}</div>
             <ul className="customDataTable">
                 <li className="clearfix">
                     <div className="dataCell">English</div>

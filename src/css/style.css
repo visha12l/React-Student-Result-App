@@ -139,6 +139,9 @@ body {
     color: #919191;
     vertical-align: middle;
 }
+.customDataTable li  a {
+  color: #919191;
+}
 .customDataTable .tableBody .dataCell {
     padding: 25px 10px;
     line-height: 25px;
