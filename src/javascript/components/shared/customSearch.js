@@ -16,11 +16,10 @@ export default class CustomSearch extends React.Component {
         return (
               <div className='customSearch'>
                   <input type="text"
-                      placeholder="search task"
-                      ref="searchText"
+                      placeholder={`Search ${this.props.placeholderText}`}
                       onChange={this.handleInputChange}
                   />
               </div>
         );
-  }
-}
+    }
+};
