@@ -6,6 +6,12 @@ body {
 .hide{
   display: none;
 }
+.cursorPointer {
+  cursor: pointer;
+}
+.cursorDefault {
+  cursor: default;
+}
 .contryListing li {
   cursor: pointer;
 }
@@ -124,6 +130,7 @@ body {
 }
 .customDataTable li .dataCell {
     display: table-cell;
+    padding: 14px 10px;
     position: relative;
     border-top: 1px solid #eee;
     background: #fff;

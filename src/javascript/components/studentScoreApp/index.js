@@ -28,25 +28,16 @@ export default class Index extends React.Component {
         });
     }
 
-    componentDidMount(){
-        this.setState({
-            result: this.state.studentData,
-        });
-    }
-
     searchItem(value) {
         let updatedList = this.state.studentData;
         updatedList = underscore.filter(updatedList, (student, key) => {
-            return (student.firstName.toLowerCase().search(value.toLowerCase()) !== -1) || (student.lastName.toLowerCase().search(
-                value.toLowerCase()) !== -1);
+          return (student.firstName.toLowerCase().search(value.toLowerCase()) > -1) || (student.lastName.toLowerCase().search(
+              value.toLowerCase()) > -1);
         });
         if(updatedList) {
             this.setState({
                 result: updatedList
             });
-        }
-        else {
-          console.log('no result found')
         }
     }
 
@@ -62,7 +53,7 @@ export default class Index extends React.Component {
         return (
             <div className="container">
                 <div className="topwrap clearfix">
-                    <BreadCrumb link={appConstants.breadCrumb.selectListLinks} />
+                    <BreadCrumb link={appConstants.breadCrumb.studentLinks} />
                 </div>
                 <CustomSearch searchItem={this.searchItem} />
                 <div className="hide">
