@@ -5,7 +5,7 @@ import BreadCrumb from '../shared/breadcrumb.js';
 import appConstants from '../../app-constants/appConstants.js';
 import StudentListing from './studentListing.js';
 import CustomCheckbox from '../shared/customCheckbox.js';
-import CustomSearch from '../shared/CustomSearch.js';
+import CustomSearch from '../shared/customSearch.js';
 import Data from '../../../static/result.json';
 
 export default class Index extends React.Component {
