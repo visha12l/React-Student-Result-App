@@ -27,7 +27,7 @@ export default class StudentListing extends React.Component {
                         </li>
                         {underscore.map(studentData, (student, key) => {
                             let total = (student.marks.english + student.marks.hindi + student.marks.mathematics);
-                            let percentage = parseInt(total / 3);
+                            let percentage = parseInt(total / 3, 10);
                             let listClass = getClassSet({
                                 'clearfix tableBody': true,
                                 'redBg': percentage < 35

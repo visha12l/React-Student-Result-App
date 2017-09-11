@@ -7,7 +7,7 @@ export default class StudentDetails extends React.Component {
     render() {
         let studentDetails = JSON.parse(this.props.location.search.split('?')[1].split('=')[1]);
         let total = studentDetails.marks.english + studentDetails.marks.hindi + studentDetails.marks.mathematics;
-        let percentage = parseInt(total / 3);
+        let percentage = parseInt(total / 3, 10);
         return (
             <div className="container">
                 <div className="topwrap clearfix">
