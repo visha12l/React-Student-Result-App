@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+var underscore = require('underscore');
 
 function formatTime (time) {
     let newTime = [time.getHours(), time.getMinutes()];
