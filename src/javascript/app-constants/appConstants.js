@@ -23,6 +23,9 @@ const appConstants = {
         studentLinks: [{link: '/', name: 'Home', className: 'active'},
                       {link: '/studentApp', name: 'studentList', className: 'currentPage'}],
 
+        loginLinks: [{link: '/', name: 'Home', className: 'active'},
+                      {link: '/login', name: 'login', className: 'currentPage'}],
+
         studentDetailsLink: [{link: '/', name: 'Home', className: 'active'},
                           {link: '/studentApp', name: 'studentList', className: 'active'},
                           {link: '/studentDetails', name: 'studentDetails', className: 'currentPage'}],
@@ -30,7 +33,8 @@ const appConstants = {
         getName(orgName) {
             return [{link: '/', name: `home${orgName}`, className: 'currentPage'},
                     {link: '/selectList', name: 'selectList', className: 'active'},
-                    {link: '/studentApp', name: 'studentList', className: 'active'}]
+                    {link: '/studentApp', name: 'studentList', className: 'active'},
+                    {link: '/login', name: 'login', className: 'active'}]
         },
     },
 }
