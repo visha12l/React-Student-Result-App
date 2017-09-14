@@ -3,6 +3,15 @@ body {
   padding-left: 20px;
   background-color: #f1f1f1;
 }
+.hide{
+  display: none;
+}
+.cursorPointer {
+  cursor: pointer;
+}
+.cursorDefault {
+  cursor: default;
+}
 .contryListing li {
   cursor: pointer;
 }
@@ -14,6 +23,8 @@ body {
   margin-bottom: 80px;
   width: 200px;
 }
+
+/*breadcrumb css*/
 .breadcrumbWrap {
   list-style: none;
   float: none;
@@ -95,4 +106,56 @@ body {
   left: 50%;
   top: 50%;
   margin: -10px 0 0 -5px;
+}
+/*custom table styling*/
+
+.customDataTable {
+  display: table;
+  margin: 15px 0 40px 0;
+  padding: 0;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  border-top: none;
+  list-style-type: none;
+}
+.customDataTable li:first-child .dataCell {
+    border: none;
+    background: none;
+    font-size: 12px;
+    padding: 14px 10px;
+    cursor: pointer;
+}
+.customDataTable li {
+    display: table-row;
+}
+.customDataTable li .dataCell {
+    display: table-cell;
+    padding: 14px 10px;
+    position: relative;
+    border-top: 1px solid #eee;
+    background: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #919191;
+    vertical-align: middle;
+}
+.customDataTable li  a {
+  color: #919191;
+}
+.customDataTable .tableBody .dataCell {
+    padding: 25px 10px;
+    line-height: 25px;
+}
+.customDataTable li.redBg .dataCell{
+    background-color: red;
+    color: white;
+}
+/*custom searchbox*/
+.customSearch,.customCheckbox {
+  margin: 20px 0
+}
+.customSearch input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #000;
 }

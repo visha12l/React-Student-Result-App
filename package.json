@@ -24,10 +24,14 @@
   },
   "homepage": "https://github.com/visha12l/React-boiler-plate#readme",
   "dependencies": {
+    "form-serialize": "^0.7.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
     "react-select": "^1.0.0-rc.5",
+    "react-validation": "^2.10.9",
+    "underscore": "^1.8.3",
+    "validator": "^8.2.0",
     "webpack": "^2.4.1"
   },
   "devDependencies": {
