@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 var underscore = require('underscore');
-import PropTypes from 'prop-types';
 
 export default class SelectComponent extends React.Component {
     constructor(props) {
@@ -79,7 +78,3 @@ export default class SelectComponent extends React.Component {
   }
 }
 
-SelectComponent.propTypes = {
-    placeholder: PropTypes.string.isRequired,
-    selectListName: PropTypes.string.isRequired
-}
