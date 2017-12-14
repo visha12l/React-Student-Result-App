@@ -1,6 +1,6 @@
 import React from 'react';
-import BreadCrumb from '../shared/breadcrumb.js';
-import appConstants from '../../app-constants/appConstants.js';
+import BreadCrumb from '../shared/breadcrumb';
+import appConstants from '../../app-constants/appConstants';
 
 export default class StudentDetails extends React.Component {
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getClassSet } from '../../utils/dashboardUtil.js';
+import { getClassSet } from '../../utils/dashboardUtil';
 import { Link } from 'react-router-dom';
 var underscore = require('underscore');
 
