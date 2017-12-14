@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SelectComponent from '../shared/selectList.js';
-import appConstants from '../../app-constants/appConstants.js';
-import BreadCrumb from '../shared/breadcrumb.js';
+import SelectComponent from '../shared/selectList';
+import appConstants from '../../app-constants/appConstants';
+import BreadCrumb from '../shared/breadcrumb';
 
 export default class SelectIndex extends React.Component {
 

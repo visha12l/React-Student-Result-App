@@ -1,9 +1,9 @@
 import React, {Component, PropTypes} from 'react';
-import appConstants from '../../app-constants/appConstants.js';
-import BreadCrumb from '../shared/breadcrumb.js';
+import appConstants from '../../app-constants/appConstants';
+import BreadCrumb from '../shared/breadcrumb';
 import Validation from 'react-validation';
-require('../../utils/validation.js');
-var serialize = require('form-serialize');
+require('../../utils/validation');
+import serialize from 'form-serialize';
 
 export default class Index extends React.Component {
 

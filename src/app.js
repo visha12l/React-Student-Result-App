@@ -3,11 +3,11 @@ import ReactDom from 'react-dom';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
 // Pages
-import Home from './javascript/components/home.js';
-import SelectIndex from './javascript/components/selectlistapp/index.js';
-import StudentIndex from './javascript/components/studentScoreApp/index.js';
-import ValidationIndex from './javascript/components/userLogin/index.js';
-import StudentDetails from './javascript/components/studentScoreApp/studentDetails.js';
+import Home from './javascript/components/home';
+import SelectIndex from './javascript/components/selectlistapp/index';
+import StudentIndex from './javascript/components/studentScoreApp/index';
+import ValidationIndex from './javascript/components/userLogin/index';
+import StudentDetails from './javascript/components/studentScoreApp/studentDetails';
 // CSS
 import './css/style.css';
 
