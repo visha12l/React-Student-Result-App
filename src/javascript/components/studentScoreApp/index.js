@@ -1,11 +1,11 @@
 import React from 'react';
 var underscore = require('underscore');
 import { Link } from 'react-router-dom';
-import BreadCrumb from '../shared/breadcrumb.js';
-import appConstants from '../../app-constants/appConstants.js';
-import StudentListing from './studentListing.js';
-import CustomCheckbox from '../shared/customCheckbox.js';
-import CustomSearch from '../shared/customSearch.js';
+import BreadCrumb from '../shared/breadcrumb';
+import appConstants from '../../app-constants/appConstants';
+import StudentListing from './studentListing';
+import CustomCheckbox from '../shared/customCheckbox';
+import CustomSearch from '../shared/customSearch';
 import Data from '../../../static/result.json';
 
 export default class Index extends React.Component {
