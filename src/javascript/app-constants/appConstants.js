@@ -17,14 +17,14 @@ const appConstants = {
         }
     },
     breadCrumb: {
-        selectListLinks: [{link: '/', name: 'Home', className: 'active'},
-                          {link: '/selectList', name: 'selectList', className: 'currentPage'}],
+        // selectListLinks: [{link: '/', name: 'Home', className: 'active'},
+        //                   {link: '/selectList', name: 'selectList', className: 'currentPage'}],
 
         studentLinks: [{link: '/', name: 'Home', className: 'active'},
                       {link: '/studentApp', name: 'studentList', className: 'currentPage'}],
 
-        loginLinks: [{link: '/', name: 'Home', className: 'active'},
-                      {link: '/login', name: 'login', className: 'currentPage'}],
+        // loginLinks: [{link: '/', name: 'Home', className: 'active'},
+        //               {link: '/login', name: 'login', className: 'currentPage'}],
 
         studentDetailsLink: [{link: '/', name: 'Home', className: 'active'},
                           {link: '/studentApp', name: 'studentList', className: 'active'},
@@ -32,9 +32,10 @@ const appConstants = {
 
         getName(orgName) {
             return [{link: '/', name: `home${orgName}`, className: 'currentPage'},
-                    {link: '/selectList', name: 'selectList', className: 'active'},
-                    {link: '/studentApp', name: 'studentList', className: 'active'},
-                    {link: '/login', name: 'login', className: 'active'}]
+ //                   {link: '/selectList', name: 'selectList', className: 'active'},
+                    {link: '/studentApp', name: 'studentList', className: 'active'}
+   //                 {link: '/login', name: 'login', className: 'active'}
+                    ]
         },
     },
 }

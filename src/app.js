@@ -15,9 +15,7 @@ ReactDom.render((
    <Router>
       <div>
         <Route exact path="/" component={Home} />
-        <Route path="/selectList" component={SelectIndex} />
         <Route path="/studentApp" component={StudentIndex} />
-        <Route path="/login" component={ValidationIndex} />
         <Route path="/studentDetails" component={StudentDetails} />
       </div>
    </Router>

@@ -9,7 +9,7 @@ const Home = () =>  {
             <div className="topwrap clearfix">
                 <BreadCrumb link={appConstants.breadCrumb.getName('link')}/>
             </div>
-            <h2>select the app by clicking the above links</h2>
+            <h2>Check student result by clicking the above link</h2>
             <div className="loaderOverlay openPopup fullScreenLoader hide">
                 <div className="loaderWrap">
                     <p className="loader"></p>

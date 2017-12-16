@@ -55,7 +55,12 @@ export default class Index extends React.Component {
                 <div className="topwrap clearfix">
                     <BreadCrumb link={appConstants.breadCrumb.studentLinks} />
                 </div>
-                <CustomSearch searchItem={this.searchItem} placeholderText="Student" />
+                <div className="clearfix">
+                    <div className="pull-left">
+                        <CustomSearch searchItem={this.searchItem} placeholderText="Student" />
+                    </div>
+                    <h2 className="pull-left">Click on student name to check the details</h2>
+                </div>
                 <div className="hide">
                     {underscore.map(this.state.resultStatus, (status, key) => {
                         return (

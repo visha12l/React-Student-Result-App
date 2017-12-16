@@ -151,8 +151,12 @@ body {
     color: white;
 }
 /*custom searchbox*/
+
 .customSearch,.customCheckbox {
-  margin: 20px 0
+  margin: 20px 0;
+}
+.customSearch {
+  margin-right: 20px;
 }
 .customSearch input {
   padding: 10px;
