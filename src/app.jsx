@@ -11,12 +11,14 @@ import StudentDetails from './javascript/components/studentScoreApp/studentDetai
 // CSS
 import './css/style.css';
 
-ReactDom.render((
-   <Router>
-      <div>
-        <Route exact path="/" component={Home} />
-        <Route path="/studentApp" component={StudentIndex} />
-        <Route path="/studentDetails" component={StudentDetails} />
-      </div>
-   </Router>
-), document.getElementById('app'));
+ReactDom.render(
+    (
+        <Router>
+            <div>
+                <Route exact path="/" component={ Home } />
+                <Route path="/studentApp" component={ StudentIndex } />
+                <Route path="/studentDetails" component={ StudentDetails } />
+            </div>
+        </Router>
+    ), document.getElementById('app'),
+);
