@@ -1,14 +1,9 @@
 import React from 'react';
 
 export default class CustomCheckbox extends React.Component {
-
   handleCheckBoxChange(status, event) {
     const isChecked = event.target.checked;
-    if (isChecked) {
-      this.props.filterList(status, isChecked);
-    } else {
-      this.props.resetList(status, isChecked);
-    }
+    isChecked ? this.props.filterList(status, isChecked) : this.props.resetList(status, isChecked);
   }
 
   render() {
