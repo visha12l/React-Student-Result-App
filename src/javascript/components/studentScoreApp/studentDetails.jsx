@@ -32,3 +32,5 @@ const StudentDetails = (props) => {
     </div>
   );
 };
+
+export default StudentDetails;

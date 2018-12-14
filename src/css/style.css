@@ -150,6 +150,7 @@ body {
     background-color: red;
     color: white;
 }
+
 /*custom searchbox*/
 
 .customSearch,.customCheckbox {
@@ -162,4 +163,9 @@ body {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #000;
+}
+.dataCellButton {
+  border: 0;
+  background-color: #fff;
+  color: #919191;
 }
