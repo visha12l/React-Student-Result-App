@@ -1,22 +1,26 @@
 import React from 'react';
-import appConstants from '../../app-constants/appConstants';
-import BreadCrumb from '../shared/breadcrumb';
 import Validation from 'react-validation';
 import serialize from 'form-serialize';
+import appConstants from '../../app-constants/appConstants';
+import BreadCrumb from '../shared/breadcrumb';
 
 require('../../utils/validation');
 
 export default class Index extends React.Component {
+  constructor() {
+    super();
+    this.loginForm = React.createRef();
+  }
+
   submitData(refName, event) {
     event.preventDefault();
-    const formStatus = this.refs.form.validateAll(true);
+    const formStatus = this.loginForm.validateAll(true);
     if (formStatus) {
       const formData = serialize(document.querySelector('#loginFrom'), { hash: true });
     }
   }
 
   render() {
-    // submit button should notbe enabled if
     return (
       <div className="container">
         <div className="topwrap clearfix">
@@ -24,7 +28,7 @@ export default class Index extends React.Component {
         </div>
         <div>
           <h3>USer login Page</h3>
-          <Validation.components.Form ref="form" id="loginForm">
+          <Validation.components.Form ref={this.loginForm} id="loginForm">
             <div>
               <Validation.components.Input
                 value=""

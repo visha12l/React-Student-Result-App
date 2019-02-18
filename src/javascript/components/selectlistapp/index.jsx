@@ -8,7 +8,7 @@ export default class SelectIndex extends React.Component {
     super(props);
     this.state = {
       countryList: appConstants.country,
-      selectListStatus: false
+      selectListStatus: false,
     };
     this.toggleSelectList = this.toggleSelectList.bind(this);
   }

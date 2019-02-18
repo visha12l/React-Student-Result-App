@@ -12,13 +12,13 @@ import StudentDetails from './javascript/components/studentScoreApp/studentDetai
 import './css/style.css';
 
 ReactDom.render(
-    (
-        <Router>
-            <div>
-                <Route exact path="/" component={ Home } />
-                <Route path="/studentApp" component={ StudentIndex } />
-                <Route path="/studentDetails" component={ StudentDetails } />
-            </div>
-        </Router>
-    ), document.getElementById('app'),
+  (
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route path="/studentApp" component={StudentIndex} />
+        <Route path="/studentDetails" component={StudentDetails} />
+      </div>
+    </Router>
+  ), document.getElementById('app'),
 );

@@ -1,9 +1,6 @@
+import underscore from 'underscore';
 import React from 'react';
 import { getClassSet } from '../../utils/dashboardUtil';
-import { Link } from 'react-router-dom';
-import underscore from 'underscore';
-import { HashRouter as Router, Route } from 'react-router-dom';
-import appConstants from '../../app-constants/appConstants';
 
 export default class StudentListing extends React.Component {
   navigateToDetails(student) {
@@ -25,16 +22,21 @@ export default class StudentListing extends React.Component {
                         <div className="dataCell">Percentage</div>
                       </li>
                       {underscore.map(studentData, (student, key) => {
-                              const total = (student.marks.english + student.marks.hindi + student.marks.mathematics);
-                              const percentage = parseInt(total / 3, 10);
-                              const listClass = getClassSet({
-                                  'clearfix tableBody': true,
-                                  redBg: percentage < 35,
-                              });
+                          const total = (student.marks.english + student.marks.hindi + student.marks.mathematics),
+                                percentage = parseInt(total / 3, 10),
+                                listClass = getClassSet({
+                                    'clearfix tableBody': true,
+                                    redBg: percentage < 35,
+                                });
                               return (
                                 <li key={key} className={listClass}>
-                                  <div className="dataCell cursorPointer" onClick={this.navigateToDetails.bind(this, student)}>
+                                  <div className="dataCell">
+                                    <button
+                                      className="cursorPointer dataCellButton"
+                                      onClick={this.navigateToDetails.bind(this, student)}
+                                    >
                                     {student.firstName}
+                                    </button>
                                   </div>
                                   <div className="dataCell">{student.lastName}</div>
                                   <div className="dataCell">{`${percentage}%` }</div>
