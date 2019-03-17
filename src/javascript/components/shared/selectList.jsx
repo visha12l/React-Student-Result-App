@@ -1,7 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import underscore from 'underscore';
-
 export default class SelectComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -77,4 +73,3 @@ export default class SelectComponent extends React.Component {
     );
   }
 }
-

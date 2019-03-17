@@ -1,4 +1,3 @@
-import React from 'react';
 import SelectComponent from '../shared/selectList';
 import appConstants from '../../app-constants/appConstants';
 import BreadCrumb from '../shared/breadcrumb';
@@ -30,8 +29,8 @@ export default class SelectIndex extends React.Component {
           <button onClick={this.toggleSelectList}>open select list Component</button>
         </div>
         {this.state.selectListStatus &&
-        <SelectComponent placeholder="select your country" toggleSelectList={this.toggleSelectList} listData={this.state.countryList} selectListName="COUNTRY" />
-                }
+          <SelectComponent placeholder="select your country" toggleSelectList={this.toggleSelectList} listData={this.state.countryList} selectListName="COUNTRY" />
+        }
       </div>
     );
   }

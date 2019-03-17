@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import underscore from 'underscore';
 
 const BreadCrumb = props => (
   <ul className="breadcrumbWrap pull-left clearfix">

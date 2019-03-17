@@ -1,4 +1,3 @@
-import React from 'react';
 import BreadCrumb from '../shared/breadcrumb';
 import appConstants from '../../app-constants/appConstants';
 

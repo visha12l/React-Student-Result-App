@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default class CustomCheckbox extends React.Component {
   handleCheckBoxChange(status, event) {
     const isChecked = event.target.checked;

@@ -1,9 +1,6 @@
-import React from 'react';
-import underscore from 'underscore';
-
 export default class CustomSearch extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 

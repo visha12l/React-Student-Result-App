@@ -1,5 +1,3 @@
-import underscore from 'underscore';
-import React from 'react';
 import { getClassSet } from '../../utils/dashboardUtil';
 
 export default class StudentListing extends React.Component {

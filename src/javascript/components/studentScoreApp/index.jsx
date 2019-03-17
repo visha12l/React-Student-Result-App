@@ -1,5 +1,3 @@
-import React from 'react';
-import underscore from 'underscore';
 import BreadCrumb from '../shared/breadcrumb';
 import appConstants from '../../app-constants/appConstants';
 import StudentListing from './studentListing';

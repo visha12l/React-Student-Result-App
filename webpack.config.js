@@ -1,5 +1,6 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path'),
+  webpack = require('webpack'),
+  HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/app.jsx',
@@ -10,6 +11,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.template.html',
+    }),
+    new webpack.ProvidePlugin({
+      React: 'react',
+      PropTypes: 'prop-types',
+      underscore: 'underscore',
+      ReactDOM: 'react-dom',
     }),
   ],
   module: {
@@ -26,11 +33,11 @@ module.exports = {
       {
         test: /\.jsx$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
     ],
   },
   resolve: {
-    extensions: ['*', '.jsx', '.js']
+    extensions: ['*', '.jsx', '.js'],
   },
-}
+};
