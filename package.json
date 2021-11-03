@@ -44,7 +44,7 @@
     "react-validation": "^2.10.9",
     "style-loader": "^0.16.1",
     "underscore": "^1.8.3",
-    "validator": "^8.2.0",
+    "validator": "^13.7.0",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
   },
